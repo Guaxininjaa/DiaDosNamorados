@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #020611;
+    font-family: 'Courier New', Courier, monospace;
+    color: #38bdf8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.terminal-box {
+    width: 100%;
+    max-width: 900px;
+    height: 85vh;
+    background-color: #0b1329;
+    border: 2px solid #00f0ff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header h1 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.user-logged {
+    color: #38bdf8;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.terminal-divider {
+    border: none;
+    border-top: 1px dashed #38bdf8;
+    margin: 15px 0;
+    opacity: 0.4;
+}
+
+.terminal-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-right: 5px;
+}
+
+/* Customização da barra de rolagem */
+.terminal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.terminal-content::-webkit-scrollbar-track {
+    background: #0b1329;
+}
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+.ascii-dino {
+    color: #4ade80;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(74, 222, 128, 0.4);
+}
+
+#terminal-output {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.line {
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+/* Cores das mensagens do sistema */
+.system-msg { color: #38bdf8; }
+.success-msg { color: #4ade80; }
+.warning-msg { color: #fbbf24; }
+.comment-msg { color: #64748b; font-style: italic; }
+.command-entered { color: #e2e8f0; font-weight: bold; }
+.error-msg { color: #f87171; }
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.prompt {
+    color: #38bdf8;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    caret-color: #00f0ff;
+}
+
+.terminal-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#btn-logout {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 8px 16px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn-logout:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* Estrutura para as fotos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.photo-card {
+    border: 1px solid #38bdf8;
+    padding: 8px;
+    background: #0f172a;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
+}
+
+.photo-placeholder {
+    height: 130px;
+    background: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.85rem;
+    border: 1px dashed #38bdf8;
+    margin-bottom: 8px;
+}
