@@ -16,18 +16,19 @@ input.addEventListener('keydown', function(event) {
             output.innerHTML += '<div class="system-msg">' +
                 'status     - Verifica o nível do amor<br>' +
                 'role       - Sorteia o ( Role de Hoje )<br>' +
+                'rango      - Sorteia o ( Rango de Hoje )<br>' +
                 'declaracao - Exibe uma declaração aleatória<br>' +
                 'motivos    - Lista por que te amo<br>' +
                 'clear      - Limpa a tela' +
                 '</div>';
         } 
         else if (comando === 'status') {
-        output.innerHTML += 'Verificando integridade do sistema...<br>' +
+            output.innerHTML += 'Verificando integridade do sistema...<br>' +
                         '[OK] Conexão com Beatriz: ESTÁVEL<br>' +
                         '[OK] Nível de amor: 100% ♾️🦖<br>' +
                         '[OK] Status cardíaco: ACELERADO ❤️🔥<br>' +
                         'Sistema operando perfeitamente!<br>';
-}
+        } 
         else if (comando === 'role') {
             const roles = [
                 "Que tal um Cinema? 🍿",
@@ -41,9 +42,26 @@ input.addEventListener('keydown', function(event) {
             const escolha = roles[Math.floor(Math.random() * roles.length)];
             output.innerHTML += '<div class="success-msg">( Role de Hoje ): ' + escolha + '</div><br>';
         }
+        else if (comando === 'rango') {
+            const rangos = [
+                "Pizza 🍕",
+                "Hambúrguer 🍔",
+                "Sushi completo 🍣",
+                "Comida mexicana (bem apimentada!) 🌮",
+                "Pastel de feira com caldo de cana 🥟",
+                "Aquele churrasquinho caprichado 🥩",
+                "Muita besteira aleatoria 🍫",
+                "Cachorro-quente  🌭",
+                "Strogonoff de frango 🍛",  
+                "Açaí com tudo que tem direito 🍧",
+                "Sorvete de massa do McDonald's 🍦",
+                
+            ];
+            const escolha = rangos[Math.floor(Math.random() * rangos.length)];
+            output.innerHTML += '<div class="success-msg">( Rango de Hoje ): ' + escolha + '</div><br>';
+        }
         else if (comando === 'declaracao') {
             const frases = [
-                "Lista: "
                 // "Beatriz, te amo mais que o Wi-Fi gratuito do shopping!",
                 // "Seu amor é tipo imposto: inevitável, mas a gente paga sorrindo!",
                 // "Você é o único acerto que faz meu sistema rodar liso!",

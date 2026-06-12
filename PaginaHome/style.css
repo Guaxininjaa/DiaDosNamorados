@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    color: #c0c0c0; /* Cor cinza claro do prompt antigo */
+    color: #c0c0c0; 
     font-family: 'Consolas', 'Courier New', monospace;
     margin: 20px;
     font-size: 18px;
@@ -30,5 +30,5 @@ body {
 }
 
 .command-entered { color: #ffffff; }
-.system-msg { color: #00ff00; } /* Verde para mensagens de sistema */
-.error-msg { color: #ff0000; }  /* Vermelho para erro */
+.system-msg { color: #00ff00; } 
+.error-msg { color: #ff0000; }  
