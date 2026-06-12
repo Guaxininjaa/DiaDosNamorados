@@ -72,7 +72,7 @@ input.addEventListener('keydown', function(event) {
                 "Energy Ice: Sabor de energético gelado ⚡"
             ];
             const escolha = saboresSense[Math.floor(Math.random() * saboresSense.length)];
-            output.innerHTML += '<div class="success-msg">( Rosh de Hoje ): Sense ' + escolha + '</div><br>';
+            output.innerHTML += '<div class="success-msg">( Rosh de Hoje ) ' + escolha + '</div><br>';
         }
         else if (comando === 'declaracao') {
             const frases = [
