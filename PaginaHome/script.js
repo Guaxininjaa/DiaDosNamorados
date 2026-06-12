@@ -1,7 +1,6 @@
 let input = document.getElementById('terminal-input');
 let output = document.getElementById('terminal-output');
 
-// Mensagem inicial do CMD
 window.onload = () => {
     output.innerHTML = 'Microsoft Windows [Versão 10.0.19045]<br>(c) Microsoft Corporation. Todos os direitos da Beatriz reservados.<br><br>';
 };
@@ -17,6 +16,7 @@ input.addEventListener('keydown', function(event) {
                 'status     - Verifica o nível do amor<br>' +
                 'role       - Sorteia o ( Role de Hoje )<br>' +
                 'rango      - Sorteia o ( Rango de Hoje )<br>' +
+                'rosh       - Sorteia o ( Rosh de Hoje ) da SENSE<br>' +
                 'declaracao - Exibe uma declaração aleatória<br>' +
                 'motivos    - Lista por que te amo<br>' +
                 'clear      - Limpa a tela' +
@@ -24,10 +24,10 @@ input.addEventListener('keydown', function(event) {
         } 
         else if (comando === 'status') {
             output.innerHTML += 'Verificando integridade do sistema...<br>' +
-                        '[OK] Conexão com Beatriz: ESTÁVEL<br>' +
-                        '[OK] Nível de amor: 100% ♾️🦖<br>' +
-                        '[OK] Status cardíaco: ACELERADO ❤️🔥<br>' +
-                        'Sistema operando perfeitamente!<br>';
+                    '[OK] Conexão com Beatriz: ESTÁVEL<br>' +
+                    '[OK] Nível de amor: 100% ♾️🦖<br>' +
+                    '[OK] Status cardíaco: ACELERADO ❤️🔥<br>' +
+                    'Sistema operando perfeitamente!<br>';
         } 
         else if (comando === 'role') {
             const roles = [
@@ -44,34 +44,41 @@ input.addEventListener('keydown', function(event) {
         }
         else if (comando === 'rango') {
             const rangos = [
-                "Pizza 🍕",
-                "Hambúrguer 🍔",
-                "Sushi completo 🍣",
-                "Comida mexicana (bem apimentada!) 🌮",
-                "Pastel de feira com caldo de cana 🥟",
-                "Aquele churrasquinho caprichado 🥩",
-                "Muita besteira aleatoria 🍫",
-                "Cachorro-quente  🌭",
-                "Strogonoff de frango 🍛",  
-                "Açaí com tudo que tem direito 🍧",
-                "Sorvete de massa do McDonald's 🍦",
-                
+                "Pizza 🍕", "Hambúrguer 🍔", "Sushi completo 🍣",
+                "Comida mexicana (bem apimentada!) 🌮", "Pastel de feira com caldo de cana 🥟",
+                "Aquele churrasquinho caprichado 🥩", "Muita besteira aleatoria 🍫",
+                "Cachorro-quente 🌭", "Strogonoff de frango 🍛", 
+                "Açaí com tudo que tem direito 🍧", "Sorvete de massa do McDonald's 🍦"
             ];
             const escolha = rangos[Math.floor(Math.random() * rangos.length)];
             output.innerHTML += '<div class="success-msg">( Rango de Hoje ): ' + escolha + '</div><br>';
         }
+        else if (comando === 'rosh') {
+            const saboresSense = [
+                "Absolut Mint: Menta super refrescante e intensa ❄️",
+                "Candy Strawberry Ice: Doce de bala de morango com um toque gelado 🍓",
+                "Melancia e Framboesa: Combinação frutada e adocicada 🍉",
+                "Maracujá Ice: Cítrico com sensação gelada 🟡",
+                "Cereja Ice: Sabor de cereja com refrescância 🍒",
+                "Green Lemon Ice: Limão gelado 🍋",
+                "Blueberry Ice: Mirtilo com toque gelado 🫐",
+                "Grape Ice: Uva com refrescância 🍇",
+                "Peach Ice: Pêssego doce com toque Ice 🍑",
+                "Tangerine Ice: Tangerina cítrica e gelada 🍊",
+                "Pineapple Ice: Abacaxi gelado 🍍",
+                "Apple Ice: Maçã verde gelada 🍏",
+                "Mango Ice: Manga com sensação gelada 🥭",
+                "Bubble Gum Ice: Chiclete com toque gelado 🍬",
+                "Energy Ice: Sabor de energético gelado ⚡"
+            ];
+            const escolha = saboresSense[Math.floor(Math.random() * saboresSense.length)];
+            output.innerHTML += '<div class="success-msg">( Rosh de Hoje ): Sense ' + escolha + '</div><br>';
+        }
         else if (comando === 'declaracao') {
             const frases = [
-                // "Beatriz, te amo mais que o Wi-Fi gratuito do shopping!",
-                // "Seu amor é tipo imposto: inevitável, mas a gente paga sorrindo!",
-                // "Você é o único acerto que faz meu sistema rodar liso!",
-                // "Eu te amo tanto que até esqueci a senha do meu banco.",
-                // "Você é igual boleto: chega todo dia na minha mente!",
-                // "Te amo mais que café, e olha que eu sou viciado!",
-                // "Minha bateria social acaba, mas o meu amor por você dura o dia todo.",
-                // "Se você fosse um código, seria o mais difícil de compilar, mas o mais satisfatório de rodar.",
-                // "Eu te amo tanto que quase compartilharia minha senha da Netflix. Quase!",
-                // "Be, você é o 'Enter' que faltava na minha vida solitária de 'Esc'!"
+                "Você é o único acerto que faz meu sistema rodar liso!",
+                "Te amo mais que café, e olha que eu sou viciado!",
+                "Be, você é o 'Enter' que faltava na minha vida solitária de 'Esc'!"
             ];
             output.innerHTML += frases[Math.floor(Math.random() * frases.length)] + '<br>';
         }
